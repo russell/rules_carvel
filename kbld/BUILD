@@ -12,7 +12,7 @@ filegroup(
 alias(
     name = "kbld_tool",
     actual = select({
-        "@bazel_tools//src/conditions:linux_x86_64": "@kbld//:kbld",
+        "@bazel_tools//src/conditions:linux_x86_64": "@kbld//file",
         "@bazel_tools//src/conditions:darwin": "@kbld_osx//:kbld",
     }),
 )
