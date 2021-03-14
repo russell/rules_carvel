@@ -1,8 +1,6 @@
 """
 """
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_file")
-
 def _kbld_impl(ctx):
     input_file = ctx.file.file
     out_file = ctx.actions.declare_file("%s.yaml" % ctx.attr.name)
