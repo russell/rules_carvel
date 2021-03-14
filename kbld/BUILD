@@ -2,13 +2,6 @@ package(default_visibility = ["//visibility:public"])
 
 exports_files(["kbld.bzl"])
 
-filegroup(
-    name = "allfiles",
-    srcs = glob([
-        "**/kbld",
-    ]),
-)
-
 alias(
     name = "kbld_tool",
     actual = select({
