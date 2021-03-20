@@ -44,14 +44,19 @@ load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 
 protobuf_deps()
 
+#
+# BuildTools Repositories
+#
 http_archive(
     name = "com_github_bazelbuild_buildtools",
     strip_prefix = "buildtools-master",
     url = "https://github.com/bazelbuild/buildtools/archive/master.zip",
 )
 
+#
+# Stardoc Repositories
+#
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
-
 git_repository(
     name = "io_bazel_stardoc",
     remote = "https://github.com/bazelbuild/stardoc.git",
@@ -60,19 +65,6 @@ git_repository(
 
 load("@io_bazel_stardoc//:setup.bzl", "stardoc_repositories")
 stardoc_repositories()
-
-
-#
-# Stately Repositories
-#
-http_archive(
-    name = "com_github_russell_rules_stately",
-    strip_prefix = "rules_stately-main",
-    urls = ["https://github.com/russell/rules_stately/archive/main.zip"],
-)
-
-load("@com_github_russell_rules_stately//stately:stately_deps.bzl", "stately_repositories")
-stately_repositories()
 
 
 #
