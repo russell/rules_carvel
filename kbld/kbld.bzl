@@ -12,7 +12,7 @@ def _kbld_impl(ctx):
             outputs = [out_file],
             tools = [ctx.executable.kbld],
             env = {
-                "HOME": ctx.genfiles_dir,
+                "HOME": ctx.genfiles_dir.path,
             },
             progress_message = "Resolving dependencies for %s" % input_file.short_path,
             command = ctx.executable.kbld.path + " -f '%s' > '%s'" % (input_file.path, out_file.path),
