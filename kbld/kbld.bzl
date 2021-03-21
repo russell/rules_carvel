@@ -9,11 +9,14 @@ def _kbld_impl(ctx):
         out_files.append(out_file)
         ctx.actions.run_shell(
             inputs = [input_file],
-
             outputs = [out_file],
             tools = [ctx.executable.kbld],
+            env = {
+                "HOME": ctx.genfiles_dir,
+            },
             progress_message = "Resolving dependencies for %s" % input_file.short_path,
             command = ctx.executable.kbld.path + " -f '%s' > '%s'" % (input_file.path, out_file.path),
+
     )
 
     return [DefaultInfo(files = depset(out_files))]
