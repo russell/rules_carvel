@@ -70,5 +70,5 @@ stardoc_repositories()
 #
 # Local Repositories
 #
-load("//kbld:kbld_deps.bzl", "kbld_repositories")
+load("//kbld:deps.bzl", "kbld_repositories")
 kbld_repositories()

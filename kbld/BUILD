@@ -12,5 +12,5 @@ alias(
 
 bzl_library(
     name = "kbld_lib",
-    srcs = ["kbld.bzl"],
+    srcs = ["defs.bzl"],
 )

@@ -2,8 +2,6 @@ load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
 package(default_visibility = ["//visibility:public"])
 
-exports_files(["vendir.bzl"])
-
 exports_files(
     ["runner.bash.template"],
     visibility = ["//visibility:public"],
@@ -19,7 +17,7 @@ alias(
 
 bzl_library(
     name = "vendir_lib",
-    srcs = ["vendir.bzl"],
+    srcs = ["defs.bzl"],
     deps = [
         "@bazel_skylib//lib:shell.bzl",
     ],
