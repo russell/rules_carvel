@@ -5,15 +5,17 @@ def vendir_repositories():
     http_file(
         name = "vendir_linux",
         downloaded_file_path = "vendir",
-        urls = ["https://github.com/vmware-tanzu/carvel-vendir/releases/download/v0.17.0/vendir-linux-amd64"],
+        urls = ["https://github.com/vmware-tanzu/carvel-vendir/releases/download/v0.24.0/vendir-linux-amd64"],
         executable = True,
+        sha256 = "b7bfd227aa2e6df602f8e79edf725bb0a944b68d207005f42f46f061c4ecd55a",
     )
 
     http_file(
         name = "vendir_osx",
         downloaded_file_path = "vendir",
-        urls = ["https://github.com/vmware-tanzu/carvel-vendir/releases/download/v0.17.0/vendir-darwin-amd64"],
+        urls = ["https://github.com/vmware-tanzu/carvel-vendir/releases/download/v0.24.0/vendir-darwin-amd64"],
         executable = True,
+        sha256 = "f3a738d1fe55803ad5faba495f662c48efa230976ccad7a159587dcf9b020f63",
     )
 
 

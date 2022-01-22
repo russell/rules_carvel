@@ -23,3 +23,5 @@ bazel_release_dependencies()
 #
 load("//kbld:deps.bzl", "kbld_repositories")
 kbld_repositories()
+load("//vendir:deps.bzl", "vendir_repositories")
+vendir_repositories()
